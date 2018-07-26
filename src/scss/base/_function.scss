@@ -1,0 +1,67 @@
+/**
+ * @file 常用功能类&通用原子类
+ * @auth jinguangguo
+ * @date 2016/10/17
+ */
+
+.fn-clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.fn-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.fn-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.fn-block {
+    display: block;
+}
+
+.fn-none {
+    display: none;
+}
+
+.fn-ta-left{
+    text-align: left;
+}
+.fn-ta-right{
+    text-align: right;
+}
+.fn-ta-center{
+    text-align: center;
+}
+
+.fn-flex{
+    display: flex;
+}
+
+.fn-flex-xcenter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fn-flex-ycenter{
+    display: flex;
+    align-items: center
+}
+
+.fn-flex-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.fn-bold{
+    font-weight: bold;
+}

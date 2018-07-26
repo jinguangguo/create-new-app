@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=1200, user-scalable=yes">-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>{% block title %}{% endblock %}</title>
+    <!--<link rel="shortcut icon" href="/favicon.ico">-->
+    <!--<link rel="icon" href="/favicon.ico">-->
+    {% block head %}{% endblock %}
+</head>
+<body>
+<article class="layout-wrapper">
+    <div class="layout-wrapper-box" id="app">
+        {% block content %}{% endblock %}
+    </div>
+</article>
+{% block footer %}{% endblock %}
+<script src="./dep/boot.js"></script>
+<script src="./dep/jquery.3.3.1.min.js"></script>
+<script src="./dep/vue.2.5.16.min.js"></script>
+{% block script %}{% endblock %}
+</body>
+</html>

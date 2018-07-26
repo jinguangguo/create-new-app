@@ -1,0 +1,171 @@
+/**
+ * @file
+ * @auth jinguangguo
+ * @date 2016/10/17
+ */
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+    text-size-adjust: none;
+}
+
+body {
+    font-size: 12px;
+    line-height: 1.4;
+    //font-family: 'Helvetica Regular', 'Microsoft YaHei'; //font-family: Hiragino Sans gb, Microsoft YaHei;
+    //font-family: 'Microsoft YaHei', 'hiragino sans gb', 'Arial', sans-serif;
+    //font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+body,
+input,
+select,
+textarea {
+    -webkit-font-smoothing: initial; // 抗锯齿
+    -moz-osx-font-smoothing: grayscale; // 抗锯齿
+}
+
+body, input, textarea, select, button {
+    font-family: -apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+}
+
+i,
+em,
+strong {
+    font-style: normal;
+}
+
+a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    &:hover,
+    &:active,
+    &:link,
+    &:visited {
+        text-decoration: none;
+    }
+    &:hover {
+        color: $color-primary-hover;
+        text-decoration: none;
+    }
+    &:focus {
+        outline: none;
+    } //&:active {
+    //    color: $color-primary-dark;
+    //}
+    &.gray {
+        color: #666;
+    }
+}
+
+// 表单
+input,
+textarea,
+select {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 8px;
+    border: 1px solid $color-border;
+    outline: 0;
+    font-size: 12px;
+    word-break: break-all;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    transition: all 0.4s ease;
+
+    &:hover {
+        border: 1px $color-primary-hover solid;
+    }
+    &:focus {
+        border: 1px $color-primary-hover solid;
+    }
+    &[disabled="disabled"] {
+        pointer-events: none;
+        color: #999;
+        &:hover {
+            border: 1px #ccc solid;
+        }
+        &:focus {
+            border: 1px #ccc solid;
+        }
+    }
+}
+
+textarea {
+    height: auto;
+    line-height: 1.5; // 滚动条样式
+    &::-webkit-scrollbar {
+        width: 1px;
+        height: 4px;
+        background-color: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        height: 8px;
+        -webkit-border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+}
+
+input,
+select {
+    @include placehold-color(#ccc); ////color: #cccdcd;
+    &[block] {
+        display: block;
+        width: 100%;
+    }
+}
+
+textarea {
+    padding: 8px;
+    resize: none;
+}
+
+button {
+    border: 0 none;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+}
+
+th,
+td {
+    //word-break: break-all;
+}
+
+.icon {
+    vertical-align: baseline;
+}
+
+// input[type=number]的上下小箭头
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+    //background-color: $color-bg;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+    height: 50px;
+    -webkit-border-radius: 2px;
+    border: 1px solid $color-primary;
+    border-radius: 3px;
+    &:hover {
+        opacity: 1;
+    }
+}
